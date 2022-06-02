@@ -82,7 +82,60 @@ ul li a {
   padding: 0 1em;
   /* clip-path: polygon(50% 0, 100% 0, 100% 100%, 0% 100%); */
 }
+/*slogan sectio*/
+.slogan {
+  position: absolute;
+  bottom: 25%;
+  right: 2%;
+}
+.slogan h1 {
+  font-size: 3rem;
+  font-weight: 900;
+  color: rgba(50%, 50%, 50%, 0.2);
+}
+/*MY INFO SECTION*/
+.my-info {
+  position: absolute;
+  top: 25%;
+  left: 4%;
+}
+.my-info h1 {
+  color: var(--clr-light);
+  font-size: 3rem;
+}
+.my-info h3 {
+  color: var(--clr-white);
+  font-size: 1.5rem;
+  position: relative;
+  padding-left: 3.5rem;
+  font-weight: 500;
+}
+.my-info h3::before {
+  content: "";
+  width: 3rem;
+  height: 0.15rem;
+  background-color: var(--clr-white);
+  position: absolute;
+  left: 1%;
+  bottom: 50%;
+  transform: translate(0, 50%);
+}
+.my-info h5 {
+  font-weight: 100;
+  color: var(--clr-grey);
+  text-align: center;
+}
+/*clesr slogan*/
+.slogan h2 {
+  position: absolute;
+  color: var(--clr-white);
+  top: 10%;
+  left: 50%;
+  transform: translate(-60%, 0);
+  z-index: 999;
+}
 
+/*footer section*/
 footer {
   background-color: var(--clr-light);
   height: 7vh;
