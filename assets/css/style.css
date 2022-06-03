@@ -225,9 +225,16 @@ footer i {
   
 }
 /* card container */
+.card#code-card{
+  background-image: url(../images/code.jpg);
+}
+.card#ux-card{
+  background-image: url(../images/ux.jpg);
+}
 .card{
-  max-width: 45ch;
-  background-image: url(../images/design.jpg);
+  width: 45ch;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7),
+  rgba(0, 0, 0, 0.5)),url(../images/design.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   padding: 10rem 0 0;
