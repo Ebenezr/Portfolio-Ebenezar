@@ -8,29 +8,43 @@
   font-size: 1em;
   scroll-behavior: smooth;
 }
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+* ,
+*::after,
+*::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 body {
   font-family: "Lato", sans-serif;
   background-color: var(--clr-black);
-  height: 100vh;
-  width: 100vw;
-  padding-top: 2%;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  overflow: hidden;
+  overflow-y: auto;
+
 }
+/*Add scroll bar in chrome*/
+.body::-webkit-scrollbar{
+  display: none;
+}
+
 .container {
   position: relative;
   height: 100%;
   width: 100%;
+  height: 100vh;
+  width: 100vw;
+  padding-top: 2%;
 }
+/*******************************************************/
 /*header nab bar*/
 header {
   width: 100%;
   height: 7vh;
   position: relative;
   color: var(--clr-white);
+  position: fixed;
 }
 nav {
   display: flex;
@@ -66,11 +80,13 @@ ul li {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  
 }
 ul li a {
   text-decoration: none;
   color: var(--clr-white);
-  padding: 0 1em;
+  padding: 0 2em;
+  display: block;
 }
 .contact {
   background-color: var(--clr-light);
@@ -79,20 +95,36 @@ ul li a {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 0 1em;
+  padding: 0 2em;
   /* clip-path: polygon(50% 0, 100% 0, 100% 100%, 0% 100%); */
 }
+/*******************************************************/
 /*slogan sectio*/
 .slogan {
   position: absolute;
-  bottom: 25%;
+  bottom: 12%;
   right: 2%;
 }
 .slogan h1 {
-  font-size: 3rem;
+  font-size: 7.5vmin;
   font-weight: 900;
-  color: rgba(50%, 50%, 50%, 0.2);
+  color: rgba(50%, 50%, 50%, 0.5);
+  white-space: nowrap;
 }
+/*clesr slogan*/
+.slogan h2 {
+  position: absolute;
+  color: var(--clr-white);
+  top: 10%;
+  left: 50%;
+  transform: translate(-60%, 0);
+  z-index: 999;
+  font-size: 4.5vmin;
+  white-space: nowrap;
+  font-weight: 900;
+  letter-spacing: 0.2rem;
+}
+/*******************************************************/
 /*MY INFO SECTION*/
 .my-info {
   position: absolute;
@@ -101,13 +133,13 @@ ul li a {
 }
 .my-info h1 {
   color: var(--clr-light);
-  font-size: 3rem;
+  font-size: 8vmin;
 }
 .my-info h3 {
   color: var(--clr-white);
-  font-size: 1.5rem;
+  font-size: 3vmin;
   position: relative;
-  padding-left: 3.5rem;
+  padding-left: 5rem;
   font-weight: 500;
 }
 .my-info h3::before {
@@ -121,19 +153,22 @@ ul li a {
   transform: translate(0, 50%);
 }
 .my-info h5 {
-  font-weight: 100;
+  font-weight: 300;
   color: var(--clr-grey);
   text-align: center;
+  font-size: 2.5vmin;
 }
-/*clesr slogan*/
-.slogan h2 {
+img{
+  width: 45vmax;
   position: absolute;
-  color: var(--clr-white);
-  top: 10%;
-  left: 50%;
-  transform: translate(-60%, 0);
-  z-index: 999;
+  right: 0;
+  bottom: 0;
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  z-index: -11;
+
 }
+/*******************************************************/
 
 /*footer section*/
 footer {
@@ -153,5 +188,160 @@ footer {
 }
 footer i {
   color: var(--clr-white);
-  font-size: 1.3rem;
+  font-size: 2.3rem;
 }
+/*******************************************************/
+/*services page*/
+.services{
+  height: 100vh;
+  width: 100vw;
+  padding:10rem 4%;
+  
+}
+.services .my-services{
+  color: var(--clr-white);
+}
+.services .my-services h1 strong{
+  color: var(--clr-light);
+  font-size: 8vmin;
+}
+.services .my-services h1{
+  color: var(--clr-white);
+  font-size: 5vmin;
+}
+.services .my-services p{
+  font-size: 1.7rem;
+  margin-top: 1rem;
+}
+/*******************************************************/
+/*cards*/
+/* card container */
+.card{
+  max-width: 35ch;
+  background-image: url(../images/design.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 10rem 0 0;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  transition: transform 500ms ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.card i{
+  font-size: 7vmin;
+  position: absolute;
+  top:15%;
+  color: var(--clr-white);
+  margin: 0;
+}
+/*scale card on hover*/
+.card:hover{
+  transform: scale(1.05);
+}
+/*lighten text*/
+.card{
+  color: var(--clr-white);
+}
+/* content wrapper */
+.content-wrapper{
+  --padding:1.5rem;
+  background: linear-gradient(
+      hsl(0 0% 0%/0),
+      hsl(20 0% 0%/0.3)20%,
+      hsl(0 0% 0%/1)
+  );
+  color: var(--clr-white);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /*padding: var(--padding);
+  /*hide text content*/
+  
+}
+/*card headline*/
+.card-title{
+  position: relative;
+  width: max-content;
+  color: var(--clr-white);
+  font-size: 4vmin;
+  margin-bottom: 4rem;
+}
+/*title underline*/
+.card-title::after{
+  content: "";
+  position: absolute;
+  left: calc(var(--padding)* -1);
+  bottom: -0.1rem;
+  background: var(--clr-light);
+  height: 0.2rem;
+  width: calc(100% + var(--padding));
+  /*animation*/
+  transition: transform 500ms ease;
+  transform-origin:left ;
+}
+
+/* button styling */
+.btn{
+  cursor: pointer;
+  background-color: var(--clr-light);
+  border: none;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 0.3rem;
+  margin-top: 0.5rem;
+  letter-spacing: 0.1rem;
+}
+.btn:focus,
+.btn:hover{
+  background-color: var(--clr-white);
+  color: var(--clr-black);
+}
+/*active when primary focus device is hover*/
+/*inactive on touch screens*/
+
+.content-wrapper {
+      transform: translateY(93%);
+      transition: transform 500ms ease;
+      transition-delay: 500ms;
+
+  }
+
+/*animation content section*/
+.card:focus-within,
+.card:hover .content-wrapper {
+      transform: translateY(0);
+      transition-delay: 500ms;
+
+  }
+
+/*fix keybord tap animation bug*/
+ .card:hover .card-wrapper>*:not(.card-tittle),
+ .card:focus-within .card-wrapper>*:not(.card-tittle) {
+      opacity: 1;
+      transition-delay: 10 00ms;
+
+  }
+
+  /*no opacity on card title*/
+  .card-wrapper>*:not(.card-tittle) {
+      opacity: 0;
+      transition-delay: 500ms;
+      transition: transform 500ms linear;
+  }
+  /* title underline */
+  .card-title::after {
+      transform: scaleX(0);
+
+  }
+  /*underline animatioon*/
+  .card:hover .card-title::after,
+  .card:focus-within .card-title::after {
+      transform: scaleX(1);
+  }
+
+
