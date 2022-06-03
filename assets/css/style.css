@@ -223,20 +223,22 @@ footer i {
   flex-direction: row;
   width: 100%;
   height: 40vh;
-  padding: 3.5rem;
+  padding-top: 6rem;
   justify-content: space-around;
   
 }
 /* card container */
 .card#code-card{
-  background-image: url(../images/code.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+  rgba(0, 0, 0, 0.5)),url(../images/code.jpg);
 }
 .card#ux-card{
-  background-image: url(../images/ux.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+  rgba(0, 0, 0, 0.5)),url(../images/ux.jpg);
 }
 .card{
   width: 45ch;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7),
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5),
   rgba(0, 0, 0, 0.5)),url(../images/design.jpg);
   background-size: cover;
   background-repeat: no-repeat;
