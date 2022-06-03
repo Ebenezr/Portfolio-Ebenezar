@@ -215,9 +215,18 @@ footer i {
 }
 /*******************************************************/
 /*cards*/
+.card-wrapper{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 40vh;
+  padding: 3.5rem;
+  justify-content: space-around;
+  
+}
 /* card container */
 .card{
-  max-width: 35ch;
+  max-width: 45ch;
   background-image: url(../images/design.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -235,7 +244,7 @@ footer i {
   font-size: 7vmin;
   position: absolute;
   top:15%;
-  color: var(--clr-white);
+  color: var(--clr-light);
   margin: 0;
 }
 /*scale card on hover*/
@@ -249,6 +258,7 @@ footer i {
 /* content wrapper */
 .content-wrapper{
   --padding:1.5rem;
+  padding: var(--padding);
   background: linear-gradient(
       hsl(0 0% 0%/0),
       hsl(20 0% 0%/0.3)20%,
@@ -281,7 +291,7 @@ footer i {
   height: 0.2rem;
   width: calc(100% + var(--padding));
   /*animation*/
-  transition: transform 500ms ease;
+  transition: transform 300ms ease;
   transform-origin:left ;
 }
 
@@ -291,7 +301,7 @@ footer i {
   background-color: var(--clr-light);
   border: none;
   display: inline-block;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 1.5rem;
   border-radius: 0.3rem;
   margin-top: 0.5rem;
   letter-spacing: 0.1rem;
@@ -306,32 +316,32 @@ footer i {
 
 .content-wrapper {
       transform: translateY(93%);
-      transition: transform 500ms ease;
-      transition-delay: 500ms;
+      transition: transform 300ms ease;
+      transition-delay: 300ms;
 
   }
 
 /*animation content section*/
 .card:focus-within,
 .card:hover .content-wrapper {
-      transform: translateY(0);
-      transition-delay: 500ms;
+      transform: translateY(-40%);
+      transition-delay: 300ms;
 
   }
 
 /*fix keybord tap animation bug*/
- .card:hover .card-wrapper>*:not(.card-tittle),
- .card:focus-within .card-wrapper>*:not(.card-tittle) {
+ .card:hover .content-wrapper>*:not(.card-tittle),
+ .card:focus-within .content-wrapper>*:not(.card-tittle) {
       opacity: 1;
       transition-delay: 10 00ms;
 
   }
 
   /*no opacity on card title*/
-  .card-wrapper>*:not(.card-tittle) {
+  .content-wrapper>*:not(.card-tittle) {
       opacity: 0;
-      transition-delay: 500ms;
-      transition: transform 500ms linear;
+      transition-delay: 300ms;
+      transition: transform 300ms linear;
   }
   /* title underline */
   .card-title::after {
