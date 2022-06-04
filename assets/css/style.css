@@ -497,7 +497,7 @@ footer i {
     padding: 0.5em;
     z-index: 9999;
     right: 2rem;
-    top: 2rem;
+    top: 0.6rem;
     display: block;
   }
   .menu-toggle i{
@@ -507,12 +507,31 @@ footer i {
   footer {
     width: 90%;
   }
+  .services{
+    height: auto;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    padding-top: 4rem;
+  }
   .card-wrapper {
     flex-direction: column;
     height: auto;
     margin-bottom: 5rem;
   }
+  
   .card {
+    width: 100%;
+  }
+  .projects{
+    padding-top: 0;
+    height: auto;
+    background-color: #040405;
+  }
+  .project-card-wrapper{
+    width: 100%;
+    height: auto;
+  }
+  .project-card{
     width: 100%;
   }
   /*animation content section*/
