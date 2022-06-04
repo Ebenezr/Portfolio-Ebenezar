@@ -90,7 +90,21 @@ ul li a {
   color: var(--clr-white);
   padding: 0 2em;
   display: block;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
+ul li a:hover {
+ 
+  border-bottom: solid 0.15rem var(--clr-light);
+}
+ul li a:focus {
+ 
+  border-bottom: solid 0.15rem var(--clr-light);
+}
+
 .contact {
   background-color: var(--clr-light);
   display: block;
@@ -323,11 +337,13 @@ footer i {
   border-radius: 0.3rem;
   margin-top: 0.5rem;
   letter-spacing: 0.1rem;
+  color:white;
 }
 .btn:focus,
 .btn:hover {
   background-color: var(--clr-white);
   color: var(--clr-black);
+  border: 0.15rem solid var(--clr-light);
 }
 /*active when primary focus device is hover*/
 /*inactive on touch screens*/
@@ -370,6 +386,71 @@ footer i {
 .header-nav[data-visible="true"] {
   transform: translateX(0);
 }
+/*************************************************/
+/*resent projects section*/
+.projects{
+  width: 100vw;
+  height: auto;
+  padding: 10rem 4%;
+}
+
+.projects .my-my-projects {
+  color: var(--clr-white);
+}
+.projects .my-projects h1 strong {
+  color: var(--clr-light);
+  font-size: 8vmin;
+}
+.projects .my-projects h1 {
+  color: var(--clr-white);
+  font-size: 5vmin;
+}
+.projects .my-projects p {
+  font-size: 1.7rem;
+  margin-top: 1rem;
+  color: var(--clr-white);
+}
+.projects .my-projects a{
+  color: var(--clr-light);
+  text-decoration: none;
+}
+.projects .my-projects a:hover{
+  color: var(--clr-white);
+ 
+}
+.project-card-wrapper{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 70%;
+  height: auto;
+  margin: 2rem auto;
+  border-radius: 2rem;
+  padding: 3rem 1rem;
+  justify-content: space-around;
+  background-color: var(--clr-white);
+
+}
+.project-card{
+  width: 70%;
+  background-color: #a1a1a011;
+  padding: 2rem;
+  border-radius: 2rem;
+  margin: 0 auto;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+.project-card img{
+  max-width: 100%;
+  height: 90%;
+  object-fit: contain;
+
+}
+
 /***********************************/
 /*MEDIA QUERY*/
 @media (max-width: 700px) {
@@ -389,6 +470,7 @@ footer i {
     text-align: left;
 
   }
+
   .header-nav {
     --gap: 1rem;
     height: auto;
