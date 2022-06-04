@@ -7,20 +7,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/style.css">
     <script src="https://kit.fontawesome.com/a62c4705ce.js" crossorigin="anonymous"></script>
+    <script src="./assets/js/index.js" defer></script>
     <title>Home</title>
 </head>
 
 <body>
     <article class="container" id="home">
         <header>
+            <button class="menu-toggle" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
             <nav>
                 <div class="logo">
-                    <h2>BLIND</h2>
+                    <h2>POTFOLIO</h2>
                 </div>
-                <ul>
+                <ul class="header-nav" id="header-nav" data-visible="false">
                     <li><a href="#home">HOME</a></li>
-                    <li><a href="#"></a>BIO</li>
-                    <li><a href="#">POTFOLIO</a></li>
+                    <li><a href="#">BIO</a></li>
+                    <li><a href="#">SKILLS</a></li>
                     <li><a href="#services">SERVICES</a></li>
                     <li><a class="contact" href="#">CONTACT</a></li>
                 </ul>
@@ -35,7 +37,7 @@
             <h1><strong>A new vision of design</strong></h1>
             <h2>A new vision of design</h2>
         </div>
-        <img src="./assets/images/DSC_4610.png" alt="">
+        <img id="main-img" src="./assets/images/DSC_4610.png" alt="">
         <footer>
             <i class="fa-brands fa-linkedin"></i>
             <i class="fa-brands fa-facebook-square"></i>
@@ -48,7 +50,7 @@
         <div class="my-services" id="services">
             <h1><strong>
                     My awesome</strong> <br>services</h1>
-            <p>Yes I'm a proffessional trust me🤠</p>
+            <p>Yes! I'm a proffessional trust me🤠</p>
         </div>
         <div class="card-wrapper">
             <div class="card"><i class="fa-solid fa-pen-ruler"></i>
@@ -76,7 +78,9 @@
             </div>
         </div>
     </article>
-    <script src="./assets/js/index.js"></script>
+    <article class="projects">
+        
+    </article>
 </body>
 
 </html>
